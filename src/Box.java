@@ -14,7 +14,7 @@ public class Box<Type extends Fruit> {
         this.box.add(content);
     }
 
-    public void moveContent(Box box) {
+    public void moveContent(Box<Type> box) {
         box.box.addAll(this.box);
         this.box.clear();
     }
@@ -39,7 +39,7 @@ public class Box<Type extends Fruit> {
         return storedAmount;
     }
 
-    public boolean compareWeight(Box box) {
+    public boolean compareWeight(Box<?> box) {
         return this.getWeight() == box.getWeight();
     }
 

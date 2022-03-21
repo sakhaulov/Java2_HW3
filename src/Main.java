@@ -55,5 +55,6 @@ public class Main {
         MyUtils myUtils = new MyUtils();
         myUtils.swapArrayElems(ar, 0, 1);
         System.out.println(ar);
+
     }
 }
