@@ -1,7 +1,7 @@
 import Templates.Fruit;
 import java.util.ArrayList;
 
-public class Box<Type> {
+public class Box<Type extends Fruit> {
 
     private ArrayList<Type> box;
     private float weight;
