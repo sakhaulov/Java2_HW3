@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -44,5 +46,14 @@ public class Main {
                            "Вес четвёртой коробки: " + orangeBoxAnother.getWeight() + "\n" +
                            "Сравнили их вес, результат: " + orangeBoxNew.compareWeight(orangeBoxAnother) + "\n");
 
+
+        //Метод, меняющий 2 элемента массива местами
+        ArrayList<String> ar = new ArrayList<>();
+        ar.add("1");
+        ar.add("2");
+        System.out.println(ar);
+        MyUtils myUtils = new MyUtils();
+        myUtils.swapArrayElems(ar, 0, 1);
+        System.out.println(ar);
     }
 }

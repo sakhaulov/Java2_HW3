@@ -21,10 +21,8 @@ public class Box<Type extends Fruit> {
 
     public float getWeight() {
         float weight = 0;
-        int storedAmount = this.getStoredAmount();
         if (!(this.box.isEmpty())) {
-            Fruit content = (Fruit) this.box.get(0);
-            weight = storedAmount * content.getWeight();
+            weight = this.getStoredAmount() * this.box.get(0).getWeight();
         }
         return weight;
     }
