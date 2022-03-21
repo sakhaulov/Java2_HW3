@@ -24,20 +24,23 @@ public class Main {
             orangeBoxAnother.addContent(value);
         }
 
-        System.out.println(orangeBox.getWeight());
-        System.out.println(orangeBox.getSize());
-        System.out.println(appleBox.getWeight());
-        System.out.println(appleBox.getSize());
-        System.out.println(orangeBox.compare(appleBox));
+        System.out.println("Вес первой коробки: " + orangeBox.getWeight() + "\n" +
+                           "Вес второй коробки: " + appleBox.getWeight() + "\n" +
+                           "Сравнили их вес, результат: " + orangeBox.compareWeight(appleBox) + "\n");
+
         orangeBox.moveContent(orangeBoxNew);
-        System.out.println(orangeBox.getWeight());
-        System.out.println(orangeBox.getSize());
-        System.out.println(orangeBoxNew.getWeight());
-        System.out.println(orangeBoxNew.getSize());
+        System.out.println("Переместили содержимое первой коробки в пустую третью коробку \n" +
+                           "Вес первой коробки: " + orangeBox.getWeight() + "\n" +
+                           "Вес третьей коробки: " + orangeBoxNew.getWeight() + "\n" +
+                           "Сравнили их вес, результат: " + orangeBox.compareWeight(orangeBoxNew) + "\n");
+
+
+        System.out.println("Переместили содержимое третьей коробки в четвертую коробку с весом " + orangeBoxAnother.getWeight());
         orangeBoxNew.moveContent(orangeBoxAnother);
-        System.out.println(orangeBoxNew.getWeight());
-        System.out.println(orangeBoxNew.getSize());
-        System.out.println(orangeBoxAnother.getWeight());
-        System.out.println(orangeBoxAnother.getSize());
+        System.out.println("Вес третьей коробки: " + orangeBoxNew.getWeight() + "\n" +
+                           "Вес четвёртой коробки: " + orangeBoxAnother.getWeight() + "\n" +
+                           "Сравнили их вес, результат: " + orangeBoxNew.compareWeight(orangeBoxAnother) + "\n");
+
+
     }
 }
